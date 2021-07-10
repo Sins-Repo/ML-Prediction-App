@@ -16,4 +16,11 @@ How to run this app
 % flask run
 ```
 
-Enter 127.0.0.1:5000 in your browser tab and you will see the web app.
+Enter 127.0.0.1:5000 in your browser tab and you will see the web app
+
+<br />
+How to quit this app
+```
+% ctrl + c
+% deactivate 
+```
