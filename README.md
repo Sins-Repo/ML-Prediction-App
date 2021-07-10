@@ -1,5 +1,5 @@
 # A simple Machine Learning Prediction Application 
-This project will demonstrate how a pickled machine learning algorithm can be used on a web app
+This project will demonstrate how a pickled machine learning algorithm can be used by a web application to perform prediction. The chosen dataset in this project is Iris dataset.
 
 ### Flask
 A web framework written in Python
@@ -9,8 +9,6 @@ A web framework written in Python
 How to run this app
 ```
 % cd <project directory>
-
-# activate the virtual environment
 % source env/bin/activate
 
 % export FLASK_APP=sample
