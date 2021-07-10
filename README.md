@@ -19,6 +19,7 @@ How to run this app
 Enter 127.0.0.1:5000 in your browser tab and you will see the web app
 
 <br />
+
 How to quit this app
 ```
 % ctrl + c
