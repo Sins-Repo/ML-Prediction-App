@@ -43,6 +43,25 @@ h1 {
 .button-grp button {
 	padding: 10px;
 	margin-top: 10px;
+	border-radius: 5px;
+}
+
+.button-grp p {
+	color: #e6f3ff;
+	font-size: 15px;
+	opacity: 0.6;
+}
+
+.single form #single-submit {
+	text-align: center;
+	margin: 0 auto;
+	margin-top: 10px;
+	border-radius: 5px;
+	padding: 5px;
+}
+
+footer {
+	margin-top: 60px;
 }
 
 .browse {
@@ -58,6 +77,8 @@ h1 {
 	color: #e6f3ff;
 }
 
-.browse form input:hover {
+.browse form input:hover, .single form #single-submit:hover, .button-grp button:hover {
 	box-shadow: 1px 1px 5px #e6f3ff;
 }
+
+

@@ -2,6 +2,7 @@ import os
 import csv
 import numpy
 import pickle
+import sklearn 
 from flask import Flask, flash, request, redirect, url_for, render_template
 from werkzeug.utils import secure_filename
 
@@ -17,9 +18,16 @@ def allowed_file(filename):
     return '.' in filename and \
            filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
-@app.route('/')
+model = pickle.load(open('algo.pkl', 'rb'))
+
+@app.route('/', methods=['GET', 'POST'])
 def index():
-    return render_template("homepage.html")
+    if request.method == 'GET':
+        return render_template("homepage.html")
+    if request.method == 'POST':
+        return """
+            <h1>hello world</h1>
+        """
 
 @app.route('/predict_by_batch', methods=['GET', 'POST'])
 def table():

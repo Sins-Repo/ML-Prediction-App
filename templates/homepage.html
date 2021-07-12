@@ -8,34 +8,38 @@
 
   <h1>Machine Learning in Plant Science</h1>
   <div class="single">
-    <form>
+    <form method="POST" enctype="multipart/form-data">
       <div class="form-group">
         <label for="Petal Length">Petal Length</label>
-        <input type="input" id="petal_length" name="Petal Length">
+        <input type="text" id="petal_length" name="Petal_Length">
       </div>
       <div class="form-group">
         <label for="Sepal Length">Sepal Length</label>
-        <input type="input" id="sepal_length" name="Sepal Length">
+        <input type="text" id="sepal_length" name="Sepal_Length">
       </div>
       <div class="form-group">
         <label for="Petal Width">Petal Width</label>
-        <input type="input" id="petal_width" name="Petal Width">
+        <input type="text" id="petal_width" name="Petal_Width">
       </div>
       <div class="form-group">
         <label for="Sepal Width">Sepal Width</label>
-        <input type="input" id="sepal_width" name="Sepal Width">
+        <input type="text" id="sepal_width" name="Sepal_Width">
       </div>
+      <input id="single-submit" type="submit" value="Single">
     </form>
   </div>
-  
+
+  {% if request.method == 'POST' %}
   <div class="single-pred">
     Type of iris plant : 
   </div>
-  
-  <div class="button-grp">
-    <button>Single</button>
-    <a href="predict_by_batch"><button>Batch</button></a>
-  </div>
+  {% endif %}
 
+  <footer>
+    <div class="button-grp">
+      <p>Want to make prediction by batch?</p>
+      <a href="predict_by_batch"><button>Batch</button></a>
+    </div>
+  </footer>
 </body>
 </html>
