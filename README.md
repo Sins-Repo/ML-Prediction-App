@@ -38,7 +38,7 @@ Make prediction on a single instance. Enter all required info and hit on the *si
 <br />
 
 #### Batch prediction
-Make prediction by batch. Simple upload your csv file (with or without index will do). The predicted class along with the confidence score will then be returned and displayed in the table.
+Make prediction by batch. Simple upload your csv file (with or without index will do) and hit on the *Predict* button. The predicted class along with the confidence score will then be returned and displayed in the table.
 
 <br />
 
