@@ -25,3 +25,7 @@ How to quit this app
 % ctrl + c
 % deactivate 
 ```
+
+## Output
+Make prediction on a single instance
+![Sample Output I](https://github.com/Sins-Repo/ML-Prediction-App/blob/master/static/single-prediction.png?raw=true)
