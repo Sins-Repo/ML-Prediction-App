@@ -27,8 +27,19 @@ How to quit this app
 ```
 
 ## Output
+#### Single instance
 Make prediction on a single instance. Enter all required info and hit on the *single* button. The predicted class along with the confidence score will then be returned.
 
 <br />
 
 ![Sample Output I](https://github.com/Sins-Repo/ML-Prediction-App/blob/master/static/single-prediction.png?raw=true)
+
+<br />
+<br />
+
+#### Batch prediction
+Make prediction by batch. Simple upload your csv file (with or without index will do). The predicted class along with the confidence score will then be returned and displayed in the table.
+
+<br />
+
+![Sample Output I](https://github.com/Sins-Repo/ML-Prediction-App/blob/master/static/batch-prediction.png?raw=true)
