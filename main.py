@@ -28,6 +28,13 @@ class_name = {
     2 : "Virginica"
 }
 
+# Helper function for pickled algorithm
+def prediction(attr1, attr2, attr3, attr4):
+    data = np.array([[attr1, attr2, attr3, attr4]])
+    pred = model.predict(data)
+    score = model.predict_proba(data)[0][pred[0]] * 100
+    return pred, score
+
 @app.route('/', methods=['GET', 'POST'])
 def index():
     if request.method == 'GET':
@@ -38,9 +45,7 @@ def index():
         attr3 = request.form['Petal_Length']
         attr4 = request.form['Petal_Width']
 
-        data = np.array([[attr1, attr2, attr3, attr4]])
-        pred = model.predict(data)
-        score = model.predict_proba(data)[0][pred[0]] * 100
+        pred, score = prediction(attr1, attr2, attr3, attr4)
         return render_template("homepage.html", pred=class_name[pred[0]], score=score)
 
 @app.route('/predict_by_batch', methods=['GET', 'POST'])
