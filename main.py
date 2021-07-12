@@ -1,6 +1,6 @@
 import os
 import csv
-import numpy
+import numpy as np
 import pickle
 import sklearn 
 from flask import Flask, flash, request, redirect, url_for, render_template
@@ -25,9 +25,14 @@ def index():
     if request.method == 'GET':
         return render_template("homepage.html")
     if request.method == 'POST':
-        return """
-            <h1>hello world</h1>
-        """
+        attr1 = request.form['Sepal_Length']
+        attr2 = request.form['Sepal_Width']
+        attr3 = request.form['Petal_Length']
+        attr4 = request.form['Petal_Width']
+
+        data = np.array([[attr1, attr2, attr3, attr4]])
+        pred = model.predict(data)
+        return render_template("homepage.html", pred=pred)
 
 @app.route('/predict_by_batch', methods=['GET', 'POST'])
 def table():
