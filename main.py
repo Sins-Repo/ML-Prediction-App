@@ -60,13 +60,14 @@ def table():
             file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
 
             data = []
-            header = ['Sepal Length', 'Sepal Width','Petal Length', 'Petal Width', 'Target']
+            header = ['Sepal Length', 'Sepal Width','Petal Length', 'Petal Width', 'Class', 'Score']
 
             with open(os.path.join(app.config['UPLOAD_FOLDER'], filename)) as file:
                 csvfile = csv.DictReader(file)
                 for row in csvfile:
+                    pred, score = prediction(row['Sepal Length'], row['Sepal Width'], row['Petal Length'], row['Petal Width'])
                     data.append(dict(Sepal_Length = row['Sepal Length'], Sepal_Width = row['Sepal Width'], 
-                                    Petal_Length = row['Petal Length'], Petal_Width = row['Petal Width'], target = row['target']))
+                                    Petal_Length = row['Petal Length'], Petal_Width = row['Petal Width'], Class = class_name[pred[0]], Score = score ))
             return render_template("table.html", data=data, header=header)
         return render_template("table.html")
 
