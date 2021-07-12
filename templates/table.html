@@ -4,7 +4,7 @@
 	<title>ML Plant : Batch</title>
 
     <!-- JQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> 
 
     <!-- Bootstrap -->
     <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
@@ -60,7 +60,9 @@
 </body>
 
 <script type="text/javascript">
-    $('#proxies').DataTable();
+    $(document).ready(function() {
+      $('#proxies').DataTable();
+    });
 </script>
 
 </html> 
