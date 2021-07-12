@@ -40,7 +40,8 @@ def index():
 
         data = np.array([[attr1, attr2, attr3, attr4]])
         pred = model.predict(data)
-        return render_template("homepage.html", pred=class_name[pred[0]])
+        score = model.predict_proba(data)[0][pred[0]] * 100
+        return render_template("homepage.html", pred=class_name[pred[0]], score=score)
 
 @app.route('/predict_by_batch', methods=['GET', 'POST'])
 def table():

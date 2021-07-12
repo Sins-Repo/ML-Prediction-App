@@ -31,7 +31,8 @@
 
   {% if request.method == 'POST' %}
   <div class="single-pred">
-    Type of iris plant : {{ pred }}
+    Type of iris plant : {{ pred }} <br>
+    Confidence: {{ score }} %
   </div>
   {% endif %}
 
