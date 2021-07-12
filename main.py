@@ -18,7 +18,15 @@ def allowed_file(filename):
     return '.' in filename and \
            filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
+# Load the pickled machine learning algorithm
 model = pickle.load(open('algo.pkl', 'rb'))
+
+# Class name of the dataset
+class_name = {
+    0 : "Setosa",
+    1 : "Versicolor",
+    2 : "Virginica"
+}
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
@@ -32,7 +40,7 @@ def index():
 
         data = np.array([[attr1, attr2, attr3, attr4]])
         pred = model.predict(data)
-        return render_template("homepage.html", pred=pred)
+        return render_template("homepage.html", pred=class_name[pred[0]])
 
 @app.route('/predict_by_batch', methods=['GET', 'POST'])
 def table():
