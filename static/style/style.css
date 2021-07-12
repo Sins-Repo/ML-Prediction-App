@@ -1,9 +1,63 @@
 body {
-    background-color: #001a33;
-    padding: 50px;
+	background-color: #001a33;
+	padding: 50px;
 }
 
 h1 {
-    color:#cce6ff;
-    text-align: center;
+	color: #e6f3ff;
+	text-align: center;
+}
+
+.single {
+	padding: 20px;
+	color: #e6f3ff;
+	text-align: center;
+}
+
+.single form {
+	display: inline-block;
+}
+
+.single form label {
+	display: block;
+	margin: 10px;
+}
+
+.single form input {
+	display: block;
+	background-color: #d9e6f2;
+}
+
+.single-pred {
+	font-style: italic;
+	color: #e6f3ff;
+	text-align: center;
+	font-size: 18px;
+	margin: 18px;
+}
+
+.button-grp {
+	text-align: center;
+}
+
+.button-grp button {
+	padding: 10px;
+	margin-top: 10px;
+}
+
+.browse {
+	padding: 20px;
+	text-align: center;
+}
+
+.browse form input {
+	padding: 10px;
+	margin: 10px;
+	border-radius: 10px;
+	background-color: #00284d;
+	color: #e6f3ff;
+}
+
+.browse form input:hover {
+	box-shadow: 1px 1px 5px #e6f3ff;
 }

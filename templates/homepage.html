@@ -1,12 +1,41 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <title>ML Plant : Single</title>
   <link rel="stylesheet" href="{{ url_for('static',filename='style/style.css') }}">
 </head>
 <body>
 
-<h1>Machine Learning Application</h1>
-<p>This is a paragraph</p>
+  <h1>Machine Learning in Plant Science</h1>
+  <div class="single">
+    <form>
+      <div class="form-group">
+        <label for="Petal Length">Petal Length</label>
+        <input type="input" id="petal_length" name="Petal Length">
+      </div>
+      <div class="form-group">
+        <label for="Sepal Length">Sepal Length</label>
+        <input type="input" id="sepal_length" name="Sepal Length">
+      </div>
+      <div class="form-group">
+        <label for="Petal Width">Petal Width</label>
+        <input type="input" id="petal_width" name="Petal Width">
+      </div>
+      <div class="form-group">
+        <label for="Sepal Width">Sepal Width</label>
+        <input type="input" id="sepal_width" name="Sepal Width">
+      </div>
+    </form>
+  </div>
+  
+  <div class="single-pred">
+    Type of iris plant : 
+  </div>
+  
+  <div class="button-grp">
+    <button>Single</button>
+    <button onclick="location.href = 'batch.html';">Batch</button>
+  </div>
 
 </body>
 </html>
