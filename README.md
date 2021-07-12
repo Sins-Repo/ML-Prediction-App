@@ -27,5 +27,8 @@ How to quit this app
 ```
 
 ## Output
-Make prediction on a single instance
+Make prediction on a single instance. Enter all required info and hit on the *single* button. The predicted class along with the confidence score will then be returned.
+
+<br />
+
 ![Sample Output I](https://github.com/Sins-Repo/ML-Prediction-App/blob/master/static/single-prediction.png?raw=true)
