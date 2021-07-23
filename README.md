@@ -26,6 +26,9 @@ How to quit this app
 % deactivate 
 ```
 
+<br/>
+<br/>
+
 ## Output
 #### Single instance
 Make prediction on a single instance. Enter all required info and hit on the *single* button. The predicted class along with the confidence score will then be returned.
